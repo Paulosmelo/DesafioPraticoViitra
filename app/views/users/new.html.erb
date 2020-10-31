@@ -1,5 +1,7 @@
-<h1>New User</h1>
-
+<nav class="navbar navbar-light bg-light">
+<span class="navbar-brand mb-0 h1">Criar usuário</span>
+</nav>
 <%= render 'form', user: @user %>
-
-<%= link_to 'Back', users_path %>
+<div class="container fixed-bottom">
+<%= link_to '<button type="button" class="btn btn-primary">Voltar</button>'.html_safe, users_path %>
+<div>
