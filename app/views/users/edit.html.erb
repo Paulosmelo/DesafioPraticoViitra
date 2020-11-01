@@ -3,7 +3,10 @@
 </nav>
 <%= render 'form', user: @user %>
 
-<div class="">
-    <%= link_to '<button type="button" class="btn btn-primary">Ver</button>'.html_safe, @user %> |
+<div class="p-2">
+    
+
     <%= link_to '<button type="button" class="btn btn-primary">Voltar</button>'.html_safe, users_path %>
+    <%= link_to '<button type="button" class="btn btn-primary">Ver</button>'.html_safe, @user %> 
+    <%= link_to '<button type="button" class="btn btn-danger">Remover</button>'.html_safe, @user, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

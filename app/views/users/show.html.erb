@@ -1,49 +1,73 @@
 <p id="notice"><%= notice %></p>
+<nav class="navbar navbar-light bg-light">
+<span class="navbar-brand mb-0 h1">Detalhes</span>
+</nav>
+<div class="container w-50 float-left"> 
+  <div class="row">
+    <div class="col">
+    <p>
+      <strong>Name:</strong>      
+    </p>
+    </div>
+    <div class="col">
+      <p>
+        <%= @user.name %>
+      </p>
+    </div>
+    <div class="col">
+      <strong>Cpf:</strong>
+    </div>
+    <div class="col">
+      <%= @user.cpf %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    <p>
+      <strong>Birthdate:</strong>
+    </p>
+    </div>
+    <div class="col">
+      <p>
+        <%= @user.birthDate %>
+      </p>
+    </div>
+    <div class="col">
+      <strong>Email:</strong>
+    </div>
+    <div class="col">
+      <%= @user.email %>
+    </div>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+  <p>
+    <strong>Cellphone:</strong>
+    <%= @user.cellphone %>
+  </p>
 
-<p>
-  <strong>Cpf:</strong>
-  <%= @user.cpf %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @user.address %>
+  </p>
 
-<p>
-  <strong>Birthdate:</strong>
-  <%= @user.birthDate %>
-</p>
+  <p>
+    <strong>Cep:</strong>
+    <%= @user.cep %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <p>
+    <strong>City:</strong>
+    <%= @user.city %>
+  </p>
 
-<p>
-  <strong>Cellphone:</strong>
-  <%= @user.cellphone %>
-</p>
+  <p>
+    <strong>State:</strong>
+    <%= @user.state %>
+  </p>
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @user.address %>
-</p>
+<div class="row">
+    <%= link_to '<button type="button" class="btn btn-primary">Editar</button>'.html_safe,  edit_user_path(@user) %> 
+    <%= link_to '<button type="button" class="btn btn-primary">Voltar</button>'.html_safe, users_path %>
+</div>
 
-<p>
-  <strong>Cep:</strong>
-  <%= @user.cep %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @user.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @user.state %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
