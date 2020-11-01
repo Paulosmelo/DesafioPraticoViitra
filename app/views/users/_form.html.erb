@@ -49,11 +49,11 @@
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="input_state">State</label>
-        <%= form.select :user_state, [['Pernambuco', 26], ['São Paulo',35], ['Berlin', 3]], {}, :id=> "user_state", :class=> "form-control" %>       
+        <%= form.text_field :state, id: :user_state, class: "form-control",  placeholder: "Estado" %>
       </div>
       <div class="form-group col-md-6">
         <label for="user_city">City</label>
-        <%= form.select :user_state, [], {}, :id=> "user_city", :class=> "form-control" %>
+        <%= form.text_field :city, id: :user_city, class: "form-control",  placeholder: "Cidade" %>
       </div>
       <div class="form-group col-md-2">
         <label for="user_cep">Cep</label>
