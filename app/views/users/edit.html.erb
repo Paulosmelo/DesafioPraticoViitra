@@ -4,6 +4,5 @@
 <%= render 'form', user: @user %>
 
 <div class="container-fluid">
-    <%= link_to '<button type="button" class="btn btn-primary">Ver</button>'.html_safe, @user %> 
     <%= link_to '<button type="button" class="btn btn-danger">Remover</button>'.html_safe, @user, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
