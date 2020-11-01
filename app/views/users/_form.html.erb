@@ -26,8 +26,8 @@
     <div class="form-row">               
         <div id="date-form"class="form-group col-md-6">
           <label for="user_birthDate">Data de nascimento</label>   
-          <div class="container">
-          <%= form.date_select :birthDate, id: :user_birthDate %>
+          <div class="d-flex flex-row">
+          <%= form.date_select :birthDate, {order: [:day, :month, :year], prompt: { day: 'dia', month: 'mês', year: 'ano' }, start_year: Date.today.year, end_year: Date.today.year - 100}, {:class => "form-control p-2 mr-3 "} %>
           </div>
         </div>
       <div class="form-group col-md-6">
@@ -49,18 +49,11 @@
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="input_state">State</label>
-        <%= form.select(:user_state)  do %>
-          <% [['Lisbon', 1], ['Madrid', 2], ['Berlin', 3]].each do |c| %>
-            <%= content_tag(:option, c.first, value: c.last) %>
-          <% end %>
-        <% end %>
+        <%= form.select :user_state, [['Pernambuco', 26], ['São Paulo',35], ['Berlin', 3]], {}, :id=> "user_state", :class=> "form-control" %>       
       </div>
       <div class="form-group col-md-6">
         <label for="user_city">City</label>
-        <select id="user_city" name="user[city]" class="form-control">
-            <option selected>Escolha...</option>
-            <option value="Recife">Recife</option>
-          </select>
+        <%= form.select :user_state, [], {}, :id=> "user_city", :class=> "form-control" %>
       </div>
       <div class="form-group col-md-2">
         <label for="user_cep">Cep</label>
@@ -68,7 +61,8 @@
       </div>
     </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Confirmar', :class => 'btn btn-success' %>
+    <%= link_to '<button type="button" class="btn btn-primary float-right">Voltar</button>'.html_safe, users_path %>
   </div>
 <% end %>
 </div>

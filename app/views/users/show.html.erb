@@ -1,73 +1,113 @@
 <p id="notice"><%= notice %></p>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-light container-fluid">
 <span class="navbar-brand mb-0 h1">Detalhes</span>
 </nav>
-<div class="container w-50 float-left"> 
-  <div class="row">
-    <div class="col">
-    <p>
-      <strong>Name:</strong>      
-    </p>
-    </div>
-    <div class="col">
-      <p>
+<div class="container-fluid "> 
+  <table class="table table-bordered w-50 float-left">
+    <tr>
+      <td>
+        <p>
+          <strong>Name:</strong>      
+        </p>
+      </td>
+      <td>
+        <p>
         <%= @user.name %>
-      </p>
-    </div>
-    <div class="col">
-      <strong>Cpf:</strong>
-    </div>
-    <div class="col">
-      <%= @user.cpf %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-    <p>
-      <strong>Birthdate:</strong>
-    </p>
-    </div>
-    <div class="col">
+        </p>
+      </td>
+      <td>
+        <p>
+          <strong>Cpf:</strong>     
+        </p>
+      </td>
+      <td>
+        <p>
+          <%= @user.cpf %>
+        </p>
+      </td>     
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <strong>Data de Nascimento:</strong>     
+        </p>
+      </td>
+      <td>
+        <p>
+          <%= @user.birthDate %>
+        </p>
+      </td>
+      <td>
+        <p>
+          <strong>Email:</strong>  
+        </p>
+      </td>
+      <td>
+        <p>
+          <%= @user.email %>
+        </p>
+      </td>
+    </tr>
+    <tr>
+    <td>
       <p>
-        <%= @user.birthDate %>
+        <strong>Telefone:</strong>      
       </p>
-    </div>
-    <div class="col">
-      <strong>Email:</strong>
-    </div>
-    <div class="col">
-      <%= @user.email %>
-    </div>
-  </div>
-
-  <p>
-    <strong>Cellphone:</strong>
-    <%= @user.cellphone %>
-  </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= @user.address %>
-  </p>
-
-  <p>
-    <strong>Cep:</strong>
-    <%= @user.cep %>
-  </p>
-
-  <p>
-    <strong>City:</strong>
-    <%= @user.city %>
-  </p>
-
-  <p>
-    <strong>State:</strong>
-    <%= @user.state %>
-  </p>
+    </td>
+    <td>
+      <p>
+      <%= @user.cellphone %>
+      </p>
+    </td>
+    <td>
+      <p>
+        <strong>Endereço:</strong>     
+      </p>
+    </td>
+    <td>
+      <p>
+        <%= @user.address %>
+      </p>
+    </td>    
+  </tr>
+  <tr>
+    <td>
+      <p>
+        <strong>Cep:</strong>     
+      </p>
+    </td>
+    <td>
+      <p>
+        <%= @user.cep %>
+      </p>
+    </td>
+    <td>
+      <p>
+        <strong>Cidade:</strong>  
+      </p>
+    </td>
+    <td>
+      <p>
+        <%= @user.city %>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>
+        <strong>Estado:</strong>  
+      </p>
+     </td>
+    <td>
+      <p>
+        <%= @user.state %>
+      </p>
+    </td>
+  </tr>
+  </table>
 </div>
-
-<div class="row">
+<div class="container-fluid">
     <%= link_to '<button type="button" class="btn btn-primary">Editar</button>'.html_safe,  edit_user_path(@user) %> 
-    <%= link_to '<button type="button" class="btn btn-primary">Voltar</button>'.html_safe, users_path %>
+    <%= link_to '<button type="button" class="btn btn-primary float-right">Voltar</button>'.html_safe, users_path %>
 </div>
 

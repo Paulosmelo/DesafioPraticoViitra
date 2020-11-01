@@ -55,3 +55,6 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 
 #jquery gem
 gem 'jquery-rails'
+
+#babel gem
+gem 'babel-transpiler'
